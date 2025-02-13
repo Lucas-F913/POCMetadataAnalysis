@@ -8,7 +8,7 @@ from PIL import Image
 
 def reveal_metadata(file_path):
     """Extract metadata from any file type."""
-    with exiftool.ExifTool("C:\\Users\\Lucas Frink\\Documents\\Exiftool\\exiftool.exe") as et:
+    with exiftool.ExifTool("EXIFTOOL_PATH") as et:
         metadata_bytes = et.execute(b"-X",file_path.encode())
         #metadata = metadata_bytes.decode("utf-8")
     return metadata_bytes
